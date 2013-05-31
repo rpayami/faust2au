@@ -67,7 +67,7 @@ perl -pi -e 's/_DESC_/'"$NAME"'/g' Source/AUSource/FaustAU.r
 perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUVersion.h 
 
-xcodebuild CONFIGURATION_BUILD_DIR=/Users/reza/Library/Audio/Plug-Ins/Components
+xcodebuild CONFIGURATION_BUILD_DIR=AU_DIR
 
 rm Info.plist
 cp Info-template.plist Info.plist
