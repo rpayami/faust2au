@@ -427,16 +427,24 @@ public:
 };
 
 /********************END ARCHITECTURE SECTION (part 2/2)****************/
+//TODO
+static const int kPreset_One = 0;
+static const int kNumberPresets = 1;
+static AUPreset kPresets[kNumberPresets] =
+{
+    { kPreset_One, CFSTR("Preset One") },
+};
 
 //TODO
 #define MAX_OUT_CHANNELS 48
 
 class Faust: public AUEffectBase {
+
+
+    
 public:
 	Faust(AudioUnit component);
 	~Faust();
-    
-	// virtual UInt32 SupportedNumChannels (const AUChannelInfo** outInfo);
     
 	virtual OSStatus Version() {
 		return kFaustAUVersion;
@@ -444,7 +452,9 @@ public:
     
 	virtual OSStatus Initialize();
     
-	virtual OSStatus GetPropertyInfo(AudioUnitPropertyID inID,
+//	virtual UInt32 SupportedNumChannels (const AUChannelInfo** outInfo);
+
+    virtual OSStatus GetPropertyInfo(AudioUnitPropertyID inID,
                                      AudioUnitScope inScope, AudioUnitElement inElement,
                                      UInt32 & outDataSize, Boolean & outWritable);
     
@@ -505,31 +515,27 @@ Faust::Faust(AudioUnit component)
 	// and assigning their initial values
     
 	//TODO
-    
-	/*
-     CreateElements();
-	 
-	 CAStreamBasicDescription streamDescIn;
-	 */
+	
+    CreateElements();
     
 	dspUI = new auUI();
     
 	dsp = new mydsp();
     
-	//    int inChannels = dsp->getNumInputs();
+    int inChannels = dsp->getNumInputs();
 	int outChannels = dsp->getNumOutputs();
-	/*
-	 streamDescIn.SetCanonical(inChannels, false);	// number of input channels
-	 streamDescIn.mSampleRate = GetSampleRate();
+/*
+    CAStreamBasicDescription streamDescIn;
+    streamDescIn.SetCanonical(inChannels, false);	// number of input channels
+    streamDescIn.mSampleRate = GetSampleRate();
 	 
-	 CAStreamBasicDescription streamDescOut;
-	 streamDescOut.SetCanonical(outChannels, false);	// number of output channels
-	 streamDescOut.mSampleRate = GetSampleRate();
+    CAStreamBasicDescription streamDescOut;
+    streamDescOut.SetCanonical(outChannels, false);	// number of output channels
+    streamDescOut.mSampleRate = GetSampleRate();
 	 
-	 Inputs().GetIOElement(0)->SetStreamFormat(streamDescIn);
-	 Outputs().GetIOElement(0)->SetStreamFormat(streamDescOut);
-	 */
-    
+    Inputs().GetIOElement(0)->SetStreamFormat(streamDescIn);
+    Outputs().GetIOElement(0)->SetStreamFormat(streamDescOut);
+*/	 
 	//	UInt32 frames = GetMaxFramesPerSlice();
 	//	for ( int i=0; i<outChannels; ++i )
 	//		m_pBuffers[i] = new float[ frames ];
@@ -580,18 +586,25 @@ Faust::~Faust() {
     
 }
 
+//TODO
 /*
- UInt32 Faust::SupportedNumChannels (const AUChannelInfo** outInfo)
- {
- // set an array of arrays of different combinations of supported numbers
- // of ins and outs
- int inChannels = dsp->getNumInputs();
- int outChannels = dsp->getNumInputs();
+UInt32 Faust::SupportedNumChannels (const AUChannelInfo** outInfo) {
+    // set an array of arrays of different combinations of supported numbers
+    // of ins and outs
+    int inChannels = dsp->getNumInputs();
+    int outChannels = dsp->getNumInputs();
+
+    const AUChannelInfo sChannels[4] = {{1,1},{1,2},{2,1},{2,2}};
+    const AUChannelInfo sChannels[inChannels * outChannels];
  
- static const AUChannelInfo sChannels[1] = {{ inChannels, outChannels}};
- if (outInfo) *outInfo = sChannels;
- return sizeof (sChannels) / sizeof (AUChannelInfo);
- }
+    int count = 0;
+    for (int i; i < inChannels; i++)
+        for (int j; j < outChannels; j++)
+            sChannels[count++] = {i, j};/*
+    
+    if (outInfo) *outInfo = sChannels;
+        return sizeof (sChannels) / sizeof (AUChannelInfo);
+}
 */
 
 OSStatus Faust::Initialize() {
@@ -605,7 +618,27 @@ OSStatus Faust::Initialize() {
 	 PropertyChanged(kAudioUnitCustomProperty_, kAudioUnitScope_Global, 0 );
 	 }
 	 */
-    
+
+    // get the current numChannels for input and output.
+	// a host may test various combinations of these
+	//TODO
+    // regardless of the outInfo returned by our SupportedNumChannels method
+/*
+    SInt16 auNumInputs = (SInt16) GetInput(0)->GetStreamFormat().mChannelsPerFrame;
+	SInt16 auNumOutputs = (SInt16) GetOutput(0)->GetStreamFormat().mChannelsPerFrame;
+
+    int inChannels = dsp->getNumInputs();
+    int outChannels = dsp->getNumInputs();
+
+    if ((auNumInputs <= inChannels) && (auNumOutputs <= outChannels))
+	{
+		MaintainKernels();
+		return noErr;
+	}
+	else
+		return kAudioUnitErr_FormatNotSupported;
+
+  */  
 	dsp->init(long(GetSampleRate()));
     
 	return result;
@@ -722,14 +755,52 @@ OSStatus Faust::GetProperty(AudioUnitPropertyID inID, AudioUnitScope inScope,
 	return AUEffectBase::GetProperty(inID, inScope, inElement, outData);
 }
 
+
+
+//TODO
+OSStatus Faust::NewFactoryPresetSet (const AUPreset & inNewFactoryPreset)
+{
+	SInt32 chosenPreset = inNewFactoryPreset.presetNumber;
+	
+	for(int i = 0; i < kNumberPresets; ++i)
+	{
+		if(chosenPreset == kPresets[i].presetNumber)
+		{
+			// set whatever state you need to based on this preset's selection
+			//
+			// Here we use a switch statement, but it would also be possible to
+			// use chosenPreset as an index into an array (if you publish the preset
+			// numbers as indices in the GetPresets() method)
+			//
+			switch(chosenPreset)
+			{
+				case kPreset_One:
+					break;
+			}
+            
+            SetAFactoryPresetAsCurrent (kPresets[i]);
+			return noErr;
+		}
+	}
+	
+	return kAudioUnitErr_InvalidPropertyValue;
+}
+
+
 OSStatus Faust::GetPresets(CFArrayRef * outData) const {
     
+	if (outData == NULL) return noErr;
+	
+	CFMutableArrayRef theArray = CFArrayCreateMutable (NULL, kNumberPresets, NULL);
+	for (int i = 0; i < kNumberPresets; ++i) {
+		CFArrayAppendValue (theArray, &kPresets[i]);
+    }
+    
+	*outData = (CFArrayRef)theArray;	
 	return noErr;
 }
 
-OSStatus Faust::NewFactoryPresetSet(const AUPreset & inNewFactoryPreset) {
-	return noErr;
-}
+
 
 OSStatus Faust::ProcessBufferLists(AudioUnitRenderActionFlags& iFlags,
                                    const AudioBufferList& inBufferList, AudioBufferList& outBufferList,
