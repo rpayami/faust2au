@@ -1,14 +1,14 @@
 faust2au
 ========
 
-installation:
+INSTALLATION:
 
 - copy the contents of the 'architecture' and 'tools' folders into the similar faust folders
 - if needed, change FAUST_DIR variable in the 'tools/faust2appls/faust2au' file
 - in the terminal window, run  'install FAUST_DIR/faust2au /usr/local/bin' (FAUST_DIR is your faust folder)
 
 
-usage: 
+USAGE: 
 
 - simple case, with default arguments:
 faust2au filename
@@ -24,7 +24,7 @@ faust2au filename manufacturer STYP MANF
   MANF is a four-charachter manufacturer - default: first four character of the manufacturer)
 
 
-output: ~/Library/Audio/Plug-Ins/Components/'filename'.components
+OUTPUT: ~/Library/Audio/Plug-Ins/Components/'filename'.components
    
   AU Name: 'manufacturer: filename'  ('filename' is used as AU name. 
 
