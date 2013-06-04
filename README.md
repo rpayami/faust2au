@@ -8,11 +8,11 @@ faust2au
 
 usage: 
 
-simple case, with default arguments:
+- simple case, with default arguments:
 faust2au filename
 (e.g. faust2au echo.dsp)
 
-in general, with some extra arguments:
+- in general, with some extra arguments:
 faust2au filename manufacturer STYP MANF
   manufacturer - default: Grame
 
@@ -20,5 +20,5 @@ faust2au filename manufacturer STYP MANF
 
   MANF is a four-charachter manufacturer - default: first four character of the manufacturer)
 
-output: ~/Library/Audio/Plug-Ins/Components/'filename'.components
+- output: ~/Library/Audio/Plug-Ins/Components/'filename'.components
          AU Name: 'manufacturer: filename'  (filename is used as AU name. The names are case-sensitive, e.g. 'faust2au Echo.dsp' results in 'Echo' as the AU name)
