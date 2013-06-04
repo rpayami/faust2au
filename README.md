@@ -8,6 +8,7 @@ INSTALLATION:
 - in the terminal window, run  'install FAUST_DIR/faust2au /usr/local/bin' (FAUST_DIR is your faust folder)
 
 
+========
 
 USAGE: 
 
@@ -25,6 +26,7 @@ faust2au filename manufacturer STYP MANF
   MANF is a four-charachter manufacturer - default: first four character of the manufacturer)
 
 
+========
 
 OUTPUT:
   - ~/Library/Audio/Plug-Ins/Components/'filename'.components
