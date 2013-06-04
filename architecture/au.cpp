@@ -165,8 +165,10 @@ public:
     
 	dsp() {
 	}
-	virtual ~dsp() {
+	
+    virtual ~dsp() {
 	}
+    
 	virtual int getNumInputs() = 0;
 	virtual int getNumOutputs() = 0;
 	virtual void buildUserInterface(UI* interface) = 0;
@@ -204,24 +206,28 @@ public:
 	}
     
 public:
-	auUIObject(char* label, float* zone) :
-    fLabel(label), fZone(zone) {
+	auUIObject(char* label, float* zone) : fLabel(label), fZone(zone) {
 	}
+    
 	virtual ~auUIObject() {
 	}
     
 	virtual void GetName(char *text) {
 		std::strcpy(text, fLabel.c_str());
 	}
+    
 	virtual void SetValue(double f) {
 		*fZone = range(0.0f, 1.0f, (float) f);
 	}
+    
 	virtual float GetValue() {
 		return *fZone;
 	}
+    
 	virtual void GetDisplay(char *text) {
 		std::sprintf(text, "%f", *fZone);
 	}
+    
 	virtual long GetID() { /* returns the sum of all the ASCII characters  contained in the parameter's label */
 		int i;
 		long acc;
@@ -236,17 +242,20 @@ class auToggleButton: public auUIObject {
     
 public:
     
-	auToggleButton(char* label, float* zone) :
-    auUIObject(label, zone) {
+	auToggleButton(char* label, float* zone) : auUIObject(label, zone) {
 	}
+    
 	virtual ~auToggleButton() {
 	}
+    
 	virtual float GetValue() {
 		return *fZone;
 	}
+    
 	virtual void SetValue(double f) {
 		*fZone = (f > 0.5f) ? 1.0f : 0.0f;
 	}
+    
 	virtual void GetDisplay(char *text) {
 		(*fZone > 0.5f) ? std::strcpy(text, "ON") : std::strcpy(text, "OFF");
 	}
@@ -257,17 +266,20 @@ class auCheckButton: public auUIObject {
     
 public:
     
-	auCheckButton(char* label, float* zone) :
-    auUIObject(label, zone) {
+	auCheckButton(char* label, float* zone) : uUIObject(label, zone) {
 	}
+    
 	virtual ~auCheckButton() {
 	}
+    
 	virtual float GetValue() {
 		return *fZone;
 	}
+    
 	virtual void SetValue(double f) {
 		*fZone = (f > 0.5f) ? 1.0f : 0.0f;
 	}
+    
 	virtual void GetDisplay(char *text) {
 		(*fZone > 0.5f) ? std::strcpy(text, "ON") : std::strcpy(text, "OFF");
 	}
@@ -278,17 +290,20 @@ class auButton: public auUIObject {
     
 public:
     
-	auButton(char* label, float* zone) :
-    auUIObject(label, zone) {
+	auButton(char* label, float* zone) : auUIObject(label, zone) {
 	}
+    
 	virtual ~auButton() {
 	}
+    
 	virtual float GetValue() {
 		return *fZone;
 	}
+    
 	virtual void SetValue(double f) {
 		*fZone = (f > 0.5f) ? 1.0f : 0.0f;
 	}
+    
 	virtual void GetDisplay(char *text) {
 		(*fZone > 0.5f) ? std::strcpy(text, "ON") : std::strcpy(text, "OFF");
 	}
@@ -306,17 +321,18 @@ public:
 public:
     
 	auSlider(char* label, float* zone, float init, float min, float max,
-             float step) :
-    auUIObject(label, zone), fInit(init), fMin(min), fMax(max), fStep(
-                                                                      step) {
+             float step) : auUIObject(label, zone), fInit(init),
+                fMin(min), fMax(max), fStep(step) {
 	}
-	virtual ~auSlider() {
+	
+    virtual ~auSlider() {
 	}
     
 	virtual float GetValue() {
 		return (*fZone - fMin) / (fMax - fMin);
 	}	// normalize
-	virtual void SetValue(double f) {
+	
+    virtual void SetValue(double f) {
 		*fZone = range(fMin, fMax, (float) f);
 	} // expand
 };
@@ -331,7 +347,8 @@ public:
     
 	auUI() {
 	}
-	virtual ~auUI() {
+	
+    virtual ~auUI() {
 		for (vector<auUIObject*>::iterator iter = fUITable.begin();
              iter != fUITable.end(); iter++)
 			delete *iter;
@@ -366,12 +383,16 @@ public:
     
 	void openFrameBox(char* label) {
 	}
+    
 	void openTabBox(char* label) {
 	}
+    
 	void openHorizontalBox(char* label) {
 	}
+    
 	void openVerticalBox(char* label) {
 	}
+    
 	void closeBox() {
 	}
     
@@ -379,18 +400,22 @@ public:
 		assert(index < fUITable.size());
 		fUITable[index]->SetValue(f);
 	}
+    
 	float GetValue(long index) {
 		assert(index < fUITable.size());
 		return fUITable[index]->GetValue();
 	}
+    
 	void GetDisplay(long index, char *text) {
 		assert(index < fUITable.size());
 		fUITable[index]->GetDisplay(text);
 	}
+    
 	void GetName(long index, char *text) {
 		assert(index < fUITable.size());
 		fUITable[index]->GetName(text);
 	}
+    
 	long GetNumParams() {
 		return fUITable.size();
 	}
@@ -435,6 +460,7 @@ class Faust: public AUEffectBase {
     
 public:
 	Faust(AudioUnit component);
+    
 	~Faust();
     
 	virtual OSStatus Version() {
@@ -462,11 +488,13 @@ public:
                                   AudioUnitParameterValue inValue, UInt32);
     
 	virtual OSStatus GetPresets(CFArrayRef *outData) const;
+    
 	virtual OSStatus NewFactoryPresetSet(const AUPreset & inNewFactoryPreset);
     
 	virtual bool SupportsTail() {
 		return true;
 	}
+    
 	virtual Float64 GetTailTime() {
 		return 3.0;
 	}
@@ -476,8 +504,7 @@ public:
 		return 0.0;
 	}
     
-	virtual OSStatus ProcessBufferLists(
-                                        AudioUnitRenderActionFlags &ioActionFlags,
+	virtual OSStatus ProcessBufferLists(AudioUnitRenderActionFlags &ioActionFlags,
                                         const AudioBufferList &inBuffer, AudioBufferList &outBuffer,
                                         UInt32 inFramesToProcess);
     
