@@ -31,6 +31,6 @@ faust2au filename manufacturer STYP MANF
 OUTPUT:
   - ~/Library/Audio/Plug-Ins/Components/'filename'.components
    
-  AU Name will be: 'manufacturer: filename'  ('filename' is used as AU name. 
+  AU Name will be: 'manufacturer: filename'  ('filename' is used as the AU name). 
 
   The names are case-sensitive, e.g. 'faust2au Echo.dsp' results in 'Echo' as the AU name)
