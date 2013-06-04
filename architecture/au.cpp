@@ -324,7 +324,7 @@ public:
              float step) : auUIObject(label, zone), fInit(init),
                 fMin(min), fMax(max), fStep(step) {
 	}
-	
+    
     virtual ~auSlider() {
 	}
     
@@ -347,7 +347,7 @@ public:
     
 	auUI() {
 	}
-	
+    
     virtual ~auUI() {
 		for (vector<auUIObject*>::iterator iter = fUITable.begin();
              iter != fUITable.end(); iter++)
