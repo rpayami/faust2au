@@ -21,9 +21,9 @@ faust2au filename manufacturer STYP MANF
 
   manufacturer default is Grame
 
-  STYP is a four-charachter subtype - default: the first four characters of the filename)
+  STYP is a four-charachter subtype (The default is the first four characters of the filename)
 
-  MANF is a four-charachter manufacturer - default: the first four characters of the manufacturer)
+  MANF is a four-charachter manufacturer (The default is the first four characters of the manufacturer)
 
 
 ========
@@ -33,4 +33,4 @@ OUTPUT:
    
   AU Name will be: 'manufacturer: filename'  ('filename' is used as the AU name). 
 
-  The names are case-sensitive, e.g. 'faust2au Echo.dsp' results in 'Echo' as the AU name)
+  The names are case-sensitive, e.g. 'faust2au Echo.dsp' results in 'Echo' as the AU name
