@@ -209,7 +209,7 @@ public:
 	auUIObject(char* label, float* zone) : fLabel(label), fZone(zone) {
 	}
     
-	virtual ~auUIObject() {
+    virtual ~auUIObject() {
 	}
     
 	virtual void GetName(char *text) {
@@ -594,8 +594,7 @@ OSStatus Faust::GetParameterInfo(AudioUnitScope inScope,
 	char name[100];
 	CFStringRef str;
     
-	outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable
-    + kAudioUnitParameterFlag_IsReadable;
+	outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable + kAudioUnitParameterFlag_IsReadable;
     
 	if (inScope == kAudioUnitScope_Global) {
         
@@ -603,8 +602,7 @@ OSStatus Faust::GetParameterInfo(AudioUnitScope inScope,
             && dspUI->fUITable[inParameterID]->fZone) {
             
 			if (dynamic_cast<auButton*>(dspUI->fUITable[inParameterID])) {
-				auToggleButton* toggle =
-                (auToggleButton*) dspUI->fUITable[inParameterID];
+				auToggleButton* toggle = (auToggleButton*) dspUI->fUITable[inParameterID];
 				toggle->GetName(name);
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
                 
@@ -614,8 +612,7 @@ OSStatus Faust::GetParameterInfo(AudioUnitScope inScope,
 				outParameterInfo.maxValue = 1;
 				outParameterInfo.defaultValue = 0;
 			} else if (dynamic_cast<auToggleButton*>(dspUI->fUITable[inParameterID])) {
-				auToggleButton* toggle =
-                (auToggleButton*) dspUI->fUITable[inParameterID];
+				auToggleButton* toggle = (auToggleButton*) dspUI->fUITable[inParameterID];
 				toggle->GetName(name);
                 
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
@@ -627,8 +624,7 @@ OSStatus Faust::GetParameterInfo(AudioUnitScope inScope,
 				outParameterInfo.defaultValue = 0;
                 
 			} else if (dynamic_cast<auCheckButton*>(dspUI->fUITable[inParameterID])) {
-				auCheckButton* check =
-                (auCheckButton*) dspUI->fUITable[inParameterID];
+				auCheckButton* check = (auCheckButton*) dspUI->fUITable[inParameterID];
 				check->GetName(name);
                 
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
