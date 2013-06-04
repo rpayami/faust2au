@@ -21,9 +21,9 @@ faust2au filename manufacturer STYP MANF
 
   manufacturer default is Grame
 
-  STYP is a four-charachter subtype - default: first four character of the filename)
+  STYP is a four-charachter subtype - default: the first four characters of the filename)
 
-  MANF is a four-charachter manufacturer - default: first four character of the manufacturer)
+  MANF is a four-charachter manufacturer - default: the first four characters of the manufacturer)
 
 
 ========
