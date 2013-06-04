@@ -14,6 +14,7 @@ faust2au filename
 
 - in general, with some extra arguments:
 faust2au filename manufacturer STYP MANF
+
   manufacturer - default: Grame
 
   STYP is a four-charachter subtype - default: first four character of the filename)
