@@ -2,8 +2,8 @@
 
 #####################################################################
 #                                                                   #
-#               Compiles Faust programs to Audio Unit   	    #
-#               (c) 2013                           	            #
+#               Compiles Faust programs to Audio Unit       	       #
+#               (c) 2013                           	               #
 #                                                                   #
 #####################################################################
 
@@ -24,6 +24,11 @@ then
 	exit
 fi
 
+if [ ! -f $1 ]
+then
+    echo input file does not exist
+    exit
+fi
 
 faust -a $FAUST_DIR/architecture/au.cpp $1 -o Source/au-output.cpp
 
@@ -33,15 +38,12 @@ FILE_NAME=$(BASENAME "$FULL_FILE_NAME")
 EXTENSION="${FILE_NAME##*.}"
 FILE_NAME="${FILE_NAME%.*}"
 
-
-
 if [ $# -lt 2 ]
 then
 	MANUFACTURER="Grame"
 else
 	MANUFACTURER=$2
 fi
-
 
 NAME=$MANUFACTURER:' '"$FILE_NAME"
 
@@ -88,6 +90,6 @@ cp Source/AUSource/FaustAU-template.r Source/AUSource/FaustAU.r
 rm Source/AUSource/FaustAUVersion.h
 cp Source/AUSource/FaustAUVersion-template.h Source/AUSource/FaustAUVersion.h
 
-cp -r $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component/
 rm -r $AU_DIR/FaustAU.component
+cp -r $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component/
 
