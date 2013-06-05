@@ -29,7 +29,7 @@ faust2au filename manufacturer STYP MANF
 ========
 
 OUTPUT:
-  - ~/Library/Audio/Plug-Ins/Components/'filename'.components
+  - ~/Library/Audio/Plug-Ins/Components/'filename'.component
    
   AU Name will be: 'manufacturer: filename'  ('filename' is used as the AU name). 
 
