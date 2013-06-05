@@ -525,11 +525,6 @@ AUDIOCOMPONENT_ENTRY(AUBaseFactory, Faust)
 Faust::Faust(AudioUnit component)
 : AUEffectBase(component)
 {
-	// all the parameters must be set to their initial values here
-	//
-	// these calls have the effect both of defining the parameters for the first time
-	// and assigning their initial values
-    
 	CreateElements();
     
 	dspUI = new auUI();
