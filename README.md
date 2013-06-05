@@ -6,17 +6,18 @@ INSTALLATION:
 - copy the contents of the 'architecture' and 'tools' folders into the similar faust folders
 - if needed, change FAUST_DIR variable in the 'tools/faust2appls/faust2au' file
 - in the terminal window, run  'install FAUST_DIR/faust2au /usr/local/bin' (FAUST_DIR is your faust folder)
+- Xcode should also be installed on your system (https://developer.apple.com/xcode/)
 
 
 ========
 
 USAGE: 
 
-- simple case, with default arguments:
+- with the default arguments:
 faust2au filename
 (e.g. faust2au echo.dsp)
 
-- in general, with some extra arguments:
+- with some extra arguments:
 faust2au filename manufacturer STYP MANF
 
   'manufacturer' is the manufacturer of the AU (The default value is 'Grame')
