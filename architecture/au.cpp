@@ -208,7 +208,7 @@ public:
 public:
 	auUIObject(char* label, float* zone) : fLabel(label), fZone(zone) {
 	}
-    
+
     virtual ~auUIObject() {
 	}
     
@@ -328,7 +328,7 @@ public:
     virtual ~auSlider() {
 	}
     
-	virtual float GetValue() {
+    virtual float GetValue() {
 		return (*fZone - fMin) / (fMax - fMin);
 	}	// normalize
 	
