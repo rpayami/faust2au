@@ -76,7 +76,7 @@ perl -pi -e 's/_DESC_/'"$NAME"'/g' Source/AUSource/FaustAU.r
 perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUVersion.h 
 
-xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=/Users/reza/Library/Audio/Plug-Ins/Components
+xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null 2> ./build_errors.log
 
 rm Info.plist
 cp Info-template.plist Info.plist
@@ -90,6 +90,9 @@ cp Source/AUSource/FaustAU-template.r Source/AUSource/FaustAU.r
 rm Source/AUSource/FaustAUVersion.h
 cp Source/AUSource/FaustAUVersion-template.h Source/AUSource/FaustAUVersion.h
 
-rm -r $AU_DIR/FaustAU.component
+rm -r $AU_DIR/"$FILE_NAME".component/
 cp -r $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component/
+rm -r $AU_DIR/FaustAU.component/
+
+echo "'$NAME'" AU generated and installed successfully 
 
