@@ -1,1144 +1,0 @@
-TFaustAU
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist Info.plist
-cCopyStringsFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-cProcessPCH++ /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch.pth FaustAU_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH++ /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch.pth FaustAU_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU normal x86_64
-cLd /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU normal i386
-cCreateUniversalBinary /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU normal "x86_64 i386"
-cRez /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc Source/AUSource/FaustAU.r
-cResMergerCollector /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc
-cResMergerProduct /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc
-cTouch /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-c00000000516816E800000000000000AA
-t1365776104
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-c00000000516816D4000000000000058C
-t1365776084
-s1420
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp
-c00000000503D33980000000000012794
-t1346188184
-s75668
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp
-c00000000503D339800000000000031D5
-t1346188184
-s12757
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp
-c00000000503D339800000000000014DD
-t1346188184
-s5341
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp
-c00000000503D33980000000000000B37
-t1346188184
-s2871
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp
-c00000000503D33980000000000004881
-t1346188184
-s18561
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp
-c00000000503D339800000000000042F4
-t1346188184
-s17140
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp
-c00000000503D33980000000000002D25
-t1346188184
-s11557
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp
-c00000000503D33980000000000003EFD
-t1346188184
-s16125
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp
-c00000000503D33980000000000001371
-t1346188184
-s4977
-
-N/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp
-c00000000503D33980000000000001D69
-t1346188184
-s7529
-
-N/Applications/faust-0.9.58/architecture/AU/English.lproj/InfoPlist.strings
-c0000000051A8529F000000000000003D
-t1369985695
-s61
-
-N/Applications/faust-0.9.58/architecture/AU/FaustAU_Prefix.pch
-c00000000517E20DE0000000000000A3C
-t1367220446
-s2620
-i<Carbon/Carbon.h>
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp
-c00000000503D3398000000000000192F
-t1346188184
-s6447
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp
-c00000000503D3398000000000000241D
-t1346188184
-s9245
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp
-c00000000503D33980000000000000C3D
-t1346188184
-s3133
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp
-c00000000503D33980000000000000E22
-t1346188184
-s3618
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp
-c00000000503D33980000000000000CA1
-t1346188184
-s3233
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp
-c00000000503D33980000000000003274
-t1346188184
-s12916
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp
-c00000000503D33980000000000001354
-t1346188184
-s4948
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp
-c00000000503D33980000000000003252
-t1346188184
-s12882
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp
-c00000000503D339800000000000066FC
-t1346188184
-s26364
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp
-c00000000503D339800000000000016B2
-t1346188184
-s5810
-
-N/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp
-c00000000503D33980000000000000A1C
-t1346188184
-s2588
-
-N/Applications/faust-0.9.58/architecture/AU/Source/AUSource/FaustAU.r
-c0000000051A8529F00000000000012F3
-t1369985695
-s4851
-
-N/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp
-c0000000051A8529F00000000000085BF
-t1369985695
-s34239
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU.LinkFileList
-c0000000051A852A00000000000000A59
-t1369985696
-s2649
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU.LinkFileList
-c0000000051A852A00000000000000A85
-t1369985696
-s2693
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc
-t2
-s0
-
-N/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc
-t2
-s0
-
-N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000519AC06C00000000003B03A0
-t1369096300
-s3867552
-
-N/System/Library/Frameworks/AudioUnit.framework/AudioUnit
-c00000000519AC06C000000000000C0F0
-t1369096300
-s49392
-
-N/System/Library/Frameworks/CoreServices.framework/CoreServices
-c00000000519AC06E000000000000D4F0
-t1369096302
-s54512
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component
-t2
-s0
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist
-t2
-s0
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU
-t2
-s0
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/PkgInfo
-t2
-s0
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj/InfoPlist.strings
-t2
-s0
-
-N/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc
-t2
-s0
-
-N/var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch.pth
-t1369601395
-s13799984
-
-N/var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch.pth
-t1369601395
-s12080084
-
-NFaustAU.exp
-c00000000517E201C000000000000001A
-t1367220252
-s26
-
-NInfo.plist
-c0000000051A8529F00000000000004B5
-t1369985695
-s1205
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies518216208a58b741^0af465208a58b741^---0#1#0#--18"Check dependencies36"D1B5F6AD-F2E9-43FB-A02B-5E210F6B791B-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440005
-e391678497.841728
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cppe0d770208a58b741^edefd8218a58b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp0000000000000000^2593"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o AUPublic/AUBase/AUBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBase.o36"FA630E49-2B38-4B4F-83C0-A3EE84EE16EE-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.697260
-e391678497.951137
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp97a8b2218a58b741^c7a0f3218a58b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp0000000000000000^2631"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o AUPublic/Utility/AUBaseHelper.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBaseHelper.o36"78FA3458-0B2B-4417-8C01-F311446EDD2E-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440067
-e391678496.619939
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp51dd70208a58b741^2fc09e208a58b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp0000000000000000^2607"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o AUPublic/Utility/AUBuffer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUBuffer.o36"517964BB-62EA-4BBD-993E-776EE4E5D430-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.569744
-e391678497.909761
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp66fa91218a58b741^0ce5e8218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp0000000000000000^2617"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o AUPublic/AUBase/AUDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUDispatch.o36"EA64F75D-373E-4DAC-8B78-F5F1F34A0CD0-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440054
-e391678497.035028
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cppcfd770208a58b741^12f708218a58b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp0000000000000000^2637"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o AUPublic/OtherBases/AUEffectBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUEffectBase.o36"8DC7E64E-3BD9-4672-A1C0-C511CF9A0CC4-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440002
-e391678496.725798
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp7fde70208a58b741^5dddb9208a58b741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp0000000000000000^2641"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o AUPublic/AUBase/AUInputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUInputElement.o36"C37F804F-BB1F-470B-8DDC-C234F1A3B877-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.595642
-e391678497.940709
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp889e98218a58b741^bde2f1218a58b741^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp0000000000000000^2647"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o AUPublic/AUBase/AUOutputElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUOutputElement.o36"02227C39-2E4B-4FA3-A156-F04F4BB251F9-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.944540
-e391678498.184006
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cppc8eff1218a58b741^1a1a2f228a58b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp0000000000000000^2653"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o AUPublic/AUBase/AUPlugInDispatch.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUPlugInDispatch.o36"5A8ED686-F054-4219-A548-BB86FC378A41-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440011
-e391678497.116292
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cppd3de70208a58b741^b9c41d218a58b741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp0000000000000000^2641"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o AUPublic/AUBase/AUScopeElement.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/AUScopeElement.o36"3C5B54C0-0570-4407-B0BB-80B0D35BB729-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.596356
-e391678497.694709
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cppebc998218a58b741^4dd9b1218a58b741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp0000000000000000^2673"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o PublicUtility/CAAudioChannelLayout.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAAudioChannelLayout.o36"9CB26E1B-96A5-4057-B65B-AEAC6FFE5952-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.689289
-e391678497.873133
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cppa7aeb0218a58b741^616be2218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp0000000000000000^2625"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o PublicUtility/CABufferList.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CABufferList.o36"73A84FFC-3E16-4AA6-9BAB-7A1C7DB3C08D-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.873185
-e391678497.944326
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp45d5df218a58b741^64e7f1218a58b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp0000000000000000^2631"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o PublicUtility/CADebugMacros.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugMacros.o36"4275643B-8F65-4820-BC60-5174BAA2F281-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.874715
-e391678497.931465
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp5916e0218a58b741^5f9aee218a58b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp0000000000000000^2631"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o PublicUtility/CADebugPrintf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugPrintf.o36"B0EBAF0C-86B1-489F-8832-883194F95A06-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.857408
-e391678497.921013
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp20d2df218a58b741^3fc7eb218a58b741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp0000000000000000^2613"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o PublicUtility/CADebugger.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CADebugger.o36"1070D9B5-80B0-42ED-9F91-BF7A2A18E7C0-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.918053
-e391678497.999459
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cppfe2beb218a58b741^27dcff218a58b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp0000000000000000^2595"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o PublicUtility/CAGuard.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAGuard.o36"3D221FEB-3E0D-4CA1-8D01-8ABB2083943C-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.923425
-e391678497.972209
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cppf489ec218a58b741^19e2f8218a58b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp0000000000000000^2637"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o PublicUtility/CAHostTimeBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAHostTimeBase.o36"5E1311EE-3E51-4A0F-9732-9EC67F44B53D-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440088
-e391678496.540091
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp44dc70208a58b741^87538a208a58b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp0000000000000000^2595"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o PublicUtility/CAMutex.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAMutex.o36"F8F0F8D8-2F1E-4F06-965B-EA0D26722A37-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440252
-e391678496.726817
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp1ee170208a58b741^1710ba208a58b741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp0000000000000000^2697"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o PublicUtility/CAStreamBasicDescription.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAStreamBasicDescription.o36"F742A78E-177D-4B24-9143-C764F56AA0B8-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.608820
-e391678497.687718
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp11009c218a58b741^910db0218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp0000000000000000^2625"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o PublicUtility/CAVectorUnit.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAVectorUnit.o36"DACE4F71-DFB5-4068-BAAD-0B2C1DFC35B0-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.932718
-e391678497.982309
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cppf1f0ee218a58b741^0284fb218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp0000000000000000^2625"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o PublicUtility/CAXException.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/CAXException.o36"EB3ECAF4-612C-4AE6-8A62-C7CA00A87206-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.440015
-e391678496.679899
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp0ada70208a58b741^560dae208a58b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp0000000000000000^2635"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o AUPublic/AUBase/ComponentBase.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/ComponentBase.o36"F1E27FD6-5DBE-4659-B806-9CC16CC46BC5-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.945523
-e391678498.300804
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o
-x/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:258:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->openVerticalBox("echo-simple");
-o                                           ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:259:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->openVerticalBox("echo  1000");
-o                                           ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:260:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->addHorizontalSlider("feedback", &fslider0, 0.0f, 0.0f, 1e+02f, 0.1f);
-o                                               ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:261:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->addHorizontalSlider("millisecond", &fslider1, 0.0f, 0.0f, 1e+03f, 0.1f);
-o                                               ^
-o4 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Applications/faust-0.9.58/architecture/AU/Source/au-output.cppe432f2218a58b741^d6004d228a58b741^-1204"/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:258:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->openVerticalBox("echo-simple");                                           ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:259:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->openVerticalBox("echo  1000");                                           ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:260:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->addHorizontalSlider("feedback", &fslider0, 0.0f, 0.0f, 1e+02f, 0.1f);                                               ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:261:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->addHorizontalSlider("millisecond", &fslider1, 0.0f, 0.0f, 1e+03f, 0.1f);                                               ^4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^257#29#257#29#8788#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^258#29#258#29#8833#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^259#33#259#33#8881#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^260#33#260#33#8964#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^2593"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o Source/au-output.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/i386 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.dia -c /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/au-output.o36"3F844BC8-0F84-43D4-8EC2-0BE0D7BD50EE-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.541382
-e391678497.830382
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp9fae8a208a58b741^2d94d4218a58b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp0000000000000000^2607"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o AUPublic/AUBase/AUBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBase.o36"C8619B54-1727-46C9-B3A2-B0D405946EE2-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.286910
-e391678497.518422
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp058949218a58b741^83c284218a58b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp0000000000000000^2645"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o AUPublic/Utility/AUBaseHelper.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBaseHelper.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBaseHelper.o36"24CDED6F-AB1D-4A16-8647-2E7E0447878F-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.997552
-e391678497.115940
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp8d7bff208a58b741^a7ad1d218a58b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp0000000000000000^2621"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o AUPublic/Utility/AUBuffer.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility/AUBuffer.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUBuffer.o36"B0647AF7-CB37-457D-8CF0-C42558A1D994-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.621879
-e391678496.996304
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cppbe6c9f208a58b741^0b0eff208a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp0000000000000000^2631"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o AUPublic/AUBase/AUDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUDispatch.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUDispatch.o36"AEC24CAD-4397-4B12-91C3-934F19533386-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.995156
-e391678497.512009
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp28d5fe208a58b741^271783218a58b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp0000000000000000^2651"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o AUPublic/OtherBases/AUEffectBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases/AUEffectBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUEffectBase.o36"61A45AF1-7B0E-4B09-8C0A-933F97C6CF15-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.681308
-e391678496.993893
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cppf180ae208a58b741^b56ffe208a58b741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp0000000000000000^2655"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o AUPublic/AUBase/AUInputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUInputElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUInputElement.o36"1B2BEF4D-E8F3-4A4D-A5FA-E7917785C5BC-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.727179
-e391678496.992465
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp2861ba208a58b741^a113fe208a58b741^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp0000000000000000^2661"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o AUPublic/AUBase/AUOutputElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUOutputElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUOutputElement.o36"753DBD16-862A-4BFA-B4AB-4745621F1DB8-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.531119
-e391678497.976350
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp3f1c88218a58b741^6bf1f9218a58b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp0000000000000000^2667"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o AUPublic/AUBase/AUPlugInDispatch.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUPlugInDispatch.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUPlugInDispatch.o36"D668684D-A60D-4BB6-ADBF-A59DDECADED0-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.728114
-e391678497.433202
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cppa087ba208a58b741^ace56e218a58b741^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp0000000000000000^2655"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o AUPublic/AUBase/AUScopeElement.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/AUScopeElement.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/AUScopeElement.o36"36EA580E-C3AA-495D-861A-A0B9C8EB3AEE-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.036405
-e391678497.285663
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cppb66809218a58b741^9f2049218a58b741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp0000000000000000^2687"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o PublicUtility/CAAudioChannelLayout.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAAudioChannelLayout.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAAudioChannelLayout.o36"070DDE3F-2578-497F-B885-243D083CF3D5-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.286890
-e391678497.603971
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cppff9149218a58b741^1f9d9a218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp0000000000000000^2639"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o PublicUtility/CABufferList.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CABufferList.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CABufferList.o36"4AC3AE31-EBB1-4FB4-976F-5A9EA1B2173C-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.337126
-e391678497.528849
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cppfc6e56218a58b741^799387218a58b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp0000000000000000^2645"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o PublicUtility/CADebugMacros.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugMacros.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugMacros.o36"894F7AE8-A1A2-4145-9120-4755B20BCEBB-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.434427
-e391678497.539365
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp2e576f218a58b741^46618b218a58b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp0000000000000000^2645"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o PublicUtility/CADebugPrintf.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugPrintf.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugPrintf.o36"D8E92F1F-4D81-4373-848C-8623F19C0F88-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.289011
-e391678497.335806
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp191f4a218a58b741^aad755218a58b741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp0000000000000000^2627"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o PublicUtility/CADebugger.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CADebugger.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CADebugger.o36"B233B153-176B-46BD-B872-73F438B2E702-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.508464
-e391678497.594476
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp71cc82218a58b741^693998218a58b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp0000000000000000^2609"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o PublicUtility/CAGuard.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAGuard.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAGuard.o36"389E9667-C130-4F6A-9597-FF4FACFBD458-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.514240
-e391678497.568418
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp3ecf83218a58b741^848391218a58b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp0000000000000000^2651"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o PublicUtility/CAHostTimeBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAHostTimeBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAHostTimeBase.o36"172414CE-D5A7-4DBB-B6AD-FF841A506432-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.117284
-e391678497.286505
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp3a5d1e218a58b741^215849218a58b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp0000000000000000^2609"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o PublicUtility/CAMutex.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAMutex.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAMutex.o36"A9F6D8FB-691C-4823-9F69-E1CC18091505-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.117677
-e391678497.287704
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cppb8401e218a58b741^d7a649218a58b741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp0000000000000000^2711"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o PublicUtility/CAStreamBasicDescription.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAStreamBasicDescription.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAStreamBasicDescription.o36"FC2DD52B-18FC-47E4-A504-03F81B8C4F76-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.157341
-e391678497.506378
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp386b28218a58b741^daad81218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp0000000000000000^2639"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o PublicUtility/CAVectorUnit.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAVectorUnit.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAVectorUnit.o36"711A7E6E-C2FF-473A-9F2A-139914044640-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.519635
-e391678497.593815
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o
-x/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp223585218a58b741^680398218a58b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp0000000000000000^2639"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o PublicUtility/CAXException.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.dia -c /Applications/faust-0.9.58/architecture/AU/PublicUtility/CAXException.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/CAXException.o36"083465A3-6872-494E-AE5F-AC41C67CFB1F-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678496.993764
-e391678497.156017
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o
-x/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cppe38bfe208a58b741^bdfb27218a58b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp0000000000000000^2649"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o AUPublic/AUBase/ComponentBase.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.dia -c /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase/ComponentBase.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/ComponentBase.o36"9578E6F8-5683-4F4C-8B9E-21598DDE7F0E-
-
-CCompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391678497.540664
-e391678498.139872
-r1
-xCompileC
-xbuild/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o
-x/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:258:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->openVerticalBox("echo-simple");
-o                                           ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:259:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->openVerticalBox("echo  1000");
-o                                           ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:260:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->addHorizontalSlider("feedback", &fslider0, 0.0f, 0.0f, 1e+02f, 0.1f);
-o                                               ^
-o/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:261:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]
-o                interface->addHorizontalSlider("millisecond", &fslider1, 0.0f, 0.0f, 1e+03f, 0.1f);
-o                                               ^
-o4 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp6a888a218a58b741^8acd23228a58b741^-1204"/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:258:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->openVerticalBox("echo-simple");                                           ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:259:30: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->openVerticalBox("echo  1000");                                           ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:260:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->addHorizontalSlider("feedback", &fslider0, 0.0f, 0.0f, 1e+02f, 0.1f);                                               ^/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp:261:34: warning: conversion from string literal to 'char *' is deprecated [-Wdeprecated-writable-strings]                interface->addHorizontalSlider("millisecond", &fslider1, 0.0f, 0.0f, 1e+03f, 0.1f);                                               ^4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^257#29#257#29#8788#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^258#29#258#29#8833#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^259#33#259#33#8881#0#14"Semantic Issue--2@56"Conversion from string literal to 'char *' is deprecated-391678498#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^260#33#260#33#8964#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@79"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp0000000000000000^2607"CompileC build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o Source/au-output.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/faust-0.9.58/architecture/AU    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/FaustAU.hmap -I/Users/reza/Library/Audio/Plug-Ins/Components/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources/x86_64 -I/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/reza/Library/Audio/Plug-Ins/Components -include /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch -MMD -MT dependencies -MF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.d --serialize-diagnostics /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.dia -c /Applications/faust-0.9.58/architecture/AU/Source/au-output.cpp -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/au-output.o36"34CAF2F9-40E5-438F-AABF-966B56C68876-
-
-CCopyStringsFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s391678496.422697
-e391678496.425076
-r1
-xCopyStringsFile
-x/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy English.lproj/InfoPlist.strings0b476c208a58b741^20d16c208a58b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Applications/faust-0.9.58/architecture/AU/English.lproj/InfoPlist.strings0000000000000000^435"CopyStringsFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings    cd /Applications/faust-0.9.58/architecture/AU    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/English.lproj -- English.lproj/InfoPlist.strings36"F22A8A57-1B86-4B57-B312-D0BA1D9D9C00-
-
-CCreateUniversalBinary /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU normal "x86_64 i386"
-s391678498.489292
-e391678498.531911
-r1
-xCreateUniversalBinary
-x/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU
-xnormal
-xx86_64 i386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Create universal binary /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU9a5f7d228a58b741^842b88228a58b741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU000000000080d041^520"CreateUniversalBinary /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU normal "x86_64 i386"    cd /Applications/faust-0.9.58/architecture/AU    lipo -create /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU -output /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/MacOS/FaustAU36"871A807B-7998-429C-9997-92F87C6773B9-
-
-CLd /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU normal i386
-s391678498.307791
-e391678498.482441
-r1
-xLd
-x/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Link /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAUdfdd4e228a58b741^52817b228a58b741^---0#0#0#--889"Ld build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU normal i386    cd /Applications/faust-0.9.58/architecture/AU    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/reza/Library/Audio/Plug-Ins/Components -F/Users/reza/Library/Audio/Plug-Ins/Components -filelist /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU.LinkFileList -exported_symbols_list FaustAU.exp -mmacosx-version-min=10.7 -bundle -framework AudioToolbox -framework AudioUnit -framework CoreServices -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/i386/FaustAU36"8B95569F-6C70-4566-B3CE-62C59B685851-
-
-CLd /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU normal x86_64
-s391678498.146756
-e391678498.482452
-r1
-xLd
-x/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Link /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU32ad25228a58b741^94857b228a58b741^---0#0#0#--899"Ld build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU normal x86_64    cd /Applications/faust-0.9.58/architecture/AU    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/reza/Library/Audio/Plug-Ins/Components -F/Users/reza/Library/Audio/Plug-Ins/Components -filelist /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU.LinkFileList -exported_symbols_list FaustAU.exp -mmacosx-version-min=10.7 -bundle -framework AudioToolbox -framework AudioUnit -framework CoreServices -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/Objects-normal/x86_64/FaustAU36"01429C9B-0A69-4DDD-AD18-5541988C4344-
-
-CProcessInfoPlistFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist Info.plist
-s391678496.409389
-e391678496.414549
-r1
-xProcessInfoPlistFile
-x/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist26e368208a58b741^e21f6a208a58b741^---0#0#0#-19%DVTDocumentLocation2@69"file://localhost/Applications/faust-0.9.58/architecture/AU/Info.plist0000000000000000^424"ProcessInfoPlistFile /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist Info.plist    cd /Applications/faust-0.9.58/architecture/AU    builtin-infoPlistUtility Info.plist -genpkginfo /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Info.plist36"38A25170-490F-417A-9DA7-C670EC85DED3-
-
-CProcessPCH++ /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-exnhdvikcileysgnnjrxzqypcwea/FaustAU_Prefix.pch.pth FaustAU_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CProcessPCH++ /var/folders/0q/pzlnjf2960zg8wl268tr2gbm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/FaustAU_Prefix-gsytlfgilyixpqcomfpuesaaxnyg/FaustAU_Prefix.pch.pth FaustAU_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CResMergerCollector /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc
-s391678498.779578
-e391678498.812868
-r1
-xResMergerCollector
-x/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection143"Merge resources into /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc1dacc7228a58b741^fc17d0228a58b741^---0#0#0#--481"ResMergerCollector build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc    cd /Applications/faust-0.9.58/architecture/AU    /Applications/Xcode.app/Contents/Developer/usr/bin/ResMerger -dstIs DF /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc36"48EF5EE0-3F14-4656-9E9C-8C746C6B1657-
-
-CResMergerProduct /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc
-s391678498.819778
-e391678498.835841
-r1
-xResMergerProduct
-x/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Merge resources into /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc13eed1228a58b741^48f9d5228a58b741^---0#0#0#--460"ResMergerProduct /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc    cd /Applications/faust-0.9.58/architecture/AU    /Applications/Xcode.app/Contents/Developer/usr/bin/ResMerger /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/FaustAU.rsrc -dstIs DF -o /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component/Contents/Resources/FaustAU.rsrc36"1DE9FDF0-F8EB-4244-9F55-C3EBC89ECC50-
-
-CRez /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc Source/AUSource/FaustAU.r
-s391678498.540286
-e391678498.772493
-r1
-xRez
-x/Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc
-xSource/AUSource/FaustAU.r
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection29"Rez Source/AUSource/FaustAU.r406b8a228a58b741^a4c1c5228a58b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Applications/faust-0.9.58/architecture/AU/Source/AUSource/FaustAU.r0000000000000000^1794"Rez build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc Source/AUSource/FaustAU.r    cd /Applications/faust-0.9.58/architecture/AU    /Applications/Xcode.app/Contents/Developer/usr/bin/Rez -o /Applications/faust-0.9.58/architecture/AU/build/FaustAU.build/Default/FaustAU.build/ResourceManagerResources/Objects/FaustAU.rsrc -d SystemSevenOrLater=1 -useDF -script Roman -d "ppc_$ppc" -d i386_YES -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -arch x86_64 -arch i386 -i /Users/reza/Library/Audio/Plug-Ins/Components -i /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -i /Developer/Examples/CoreAudio/AudioUnits/AUPublic/AUBase -i /Applications/faust-0.9.58/architecture/AU/AUPublic/Utility -i /Applications/faust-0.9.58/architecture/AU/PublicUtility -i /Applications/faust-0.9.58/architecture/AU -i /Applications/faust-0.9.58/architecture/AU/AUPublic/AUBase -i /Applications/faust-0.9.58/architecture/AU/AUPublic/OtherBases -i /Users/reza/Library/Audio/Plug-Ins/Components -i /Users/reza/Library/Audio/Plug-Ins/Components/include -i /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -i /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -i /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk /Applications/faust-0.9.58/architecture/AU/Source/AUSource/FaustAU.r36"13A8F1CC-2430-47D0-A314-8F8DAAE4F5FF-
-
-CTouch /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component
-s391678498.844131
-e391678498.869202
-r1
-xTouch
-x/Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Touch /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.componenta228d8228a58b741^e084de228a58b741^---0#0#0#--206"Touch /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component    cd /Applications/faust-0.9.58/architecture/AU    /usr/bin/touch -c /Users/reza/Library/Audio/Plug-Ins/Components/FaustAU.component36"3DB98386-7CD4-4B65-AF3C-55AC8B469B69-
-
