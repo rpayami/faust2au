@@ -10,7 +10,7 @@
 
 /************************************************************************
  FAUST Architecture File
- Copyright (C) 2013
+ Copyright (C) 2013 Reza Payami
  All rights reserved.
  ----------------------------BSD License------------------------------
  Redistribution and use in source and binary forms, with or without
