@@ -90,7 +90,11 @@ cp Source/AUSource/FaustAU-template.r Source/AUSource/FaustAU.r
 rm Source/AUSource/FaustAUVersion.h
 cp Source/AUSource/FaustAUVersion-template.h Source/AUSource/FaustAUVersion.h
 
-rm -r $AU_DIR/"$FILE_NAME".component/
+echo $AU_DIR/"$FILE_NAME".component/
+if [ -d $AU_DIR/"$FILE_NAME".component/ ]
+then
+	rm -r  $AU_DIR/"$FILE_NAME".component/
+fi
 cp -r $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component/
 rm -r $AU_DIR/FaustAU.component/
 
