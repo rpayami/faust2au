@@ -266,7 +266,7 @@ class auCheckButton: public auUIObject {
     
 public:
     
-	auCheckButton(char* label, float* zone) : uUIObject(label, zone) {
+	auCheckButton(char* label, float* zone) : auUIObject(label, zone) {
 	}
     
 	virtual ~auCheckButton() {
