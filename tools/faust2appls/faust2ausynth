@@ -72,6 +72,8 @@ perl -pi -e 's/_BUNDLE_INFO_/'"$NAME"'/g' English.lproj/InfoPlist.strings
 
 perl -pi -e 's/_NAME_/'"$NAME"'/g' Source/AUSource/FaustAUSynth.r
 perl -pi -e 's/_DESC_/'"$NAME"'/g' Source/AUSource/FaustAUSynth.r 
+perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynth.r
+
 
 perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUSynthVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynthVersion.h 
