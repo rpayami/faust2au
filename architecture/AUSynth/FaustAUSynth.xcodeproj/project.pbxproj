@@ -80,11 +80,11 @@
 		929067AC061260B00065C650 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929067A9061260B00065C650 /* AudioUnit.framework */; };
 		92C5358A061360CC00D90F41 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C53589061360CC00D90F41 /* CoreServices.framework */; };
 		A919E553088DCA5A008B8742 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A919E53A088DCA5A008B8742 /* AudioToolbox.framework */; };
+		F51609CF1764EF3C00E31C71 /* ausynth-output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F51609CE1764EF3C00E31C71 /* ausynth-output.cpp */; };
 		F5AF0EA017618076002C09D0 /* FaustAUSynth_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F5AF0E9F17618076002C09D0 /* FaustAUSynth_Prefix.pch */; };
 		F5D6D4CA1763FED900F39501 /* FaustAUSynthVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D6D4C91763FED900F39501 /* FaustAUSynthVersion.h */; };
 		F5D6D4CC1763FEEB00F39501 /* FaustAUSynth.r in Rez */ = {isa = PBXBuildFile; fileRef = F5D6D4CB1763FEEB00F39501 /* FaustAUSynth.r */; };
 		F5D6D4CF1763FFC300F39501 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D6D4CD1763FFC300F39501 /* InfoPlist.strings */; };
-		F5D6D4D317640A4F00F39501 /* ausynth-output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D6D4D217640A4F00F39501 /* ausynth-output.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,11 +165,11 @@
 		92C53589061360CC00D90F41 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		A919E53A088DCA5A008B8742 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		A9223CD308A032F100341607 /* FaustAUSynth.exp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.exports; path = FaustAUSynth.exp; sourceTree = SOURCE_ROOT; };
+		F51609CE1764EF3C00E31C71 /* ausynth-output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ausynth-output.cpp"; path = "Source/ausynth-output.cpp"; sourceTree = "<group>"; };
 		F5AF0E9F17618076002C09D0 /* FaustAUSynth_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaustAUSynth_Prefix.pch; sourceTree = "<group>"; };
 		F5D6D4C91763FED900F39501 /* FaustAUSynthVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaustAUSynthVersion.h; path = Source/AUSource/FaustAUSynthVersion.h; sourceTree = "<group>"; };
 		F5D6D4CB1763FEEB00F39501 /* FaustAUSynth.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; name = FaustAUSynth.r; path = Source/AUSource/FaustAUSynth.r; sourceTree = "<group>"; };
 		F5D6D4CE1763FFC300F39501 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F5D6D4D217640A4F00F39501 /* ausynth-output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ausynth-output.cpp"; path = "Source/AUSource/ausynth-output.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F5D6D4D217640A4F00F39501 /* ausynth-output.cpp */,
+				F51609CE1764EF3C00E31C71 /* ausynth-output.cpp */,
 				F5D6D4CB1763FEEB00F39501 /* FaustAUSynth.r */,
 				F5D6D4C91763FED900F39501 /* FaustAUSynthVersion.h */,
 				A9223CD308A032F100341607 /* FaustAUSynth.exp */,
@@ -512,7 +512,7 @@
 				8256DD2115DDBD6C008799A0 /* CAVectorUnit.cpp in Sources */,
 				8256DD2715DDBD6C008799A0 /* CAXException.cpp in Sources */,
 				8256DD2D15DDBDDB008799A0 /* CAAUMIDIMap.cpp in Sources */,
-				F5D6D4D317640A4F00F39501 /* ausynth-output.cpp in Sources */,
+				F51609CF1764EF3C00E31C71 /* ausynth-output.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
