@@ -59,6 +59,9 @@
 
 using namespace std;
 
+static const UInt32 kNumNotes = 32;
+static const UInt32 kMaxActiveNotes = 32;
+
 // On Intel set FZ (Flush to Zero) and DAZ (Denormals Are Zero)
 // flags to avoid costly denormals
 #ifdef __SSE__
@@ -101,8 +104,6 @@ inline int int2pow2(int x) {
 
 //inline void *aligned_calloc(size_t nmemb, size_t size) { return (void*)((unsigned)(calloc((nmemb*size)+15,sizeof(char)))+15 & 0xfffffff0); }
 //inline void *aligned_calloc(size_t nmemb, size_t size) { return (void*)((size_t)(calloc((nmemb*size)+15,sizeof(char)))+15 & ~15); }
-
-
 
 <<includeIntrinsic>>
 
@@ -167,8 +168,8 @@ public:
     
 	dsp() {
 	}
-	
-    virtual ~dsp() {
+    
+	virtual ~dsp() {
 	}
     
 	virtual int getNumInputs() = 0;
@@ -208,10 +209,11 @@ public:
 	}
     
 public:
-	auUIObject(char* label, float* zone) : fLabel(label), fZone(zone) {
+	auUIObject(char* label, float* zone) :
+    fLabel(label), fZone(zone) {
 	}
-
-    virtual ~auUIObject() {
+    
+	virtual ~auUIObject() {
 	}
     
 	virtual void GetName(char *text) {
@@ -244,7 +246,8 @@ class auToggleButton: public auUIObject {
     
 public:
     
-	auToggleButton(char* label, float* zone) : auUIObject(label, zone) {
+	auToggleButton(char* label, float* zone) :
+    auUIObject(label, zone) {
 	}
     
 	virtual ~auToggleButton() {
@@ -268,7 +271,8 @@ class auCheckButton: public auUIObject {
     
 public:
     
-	auCheckButton(char* label, float* zone) : auUIObject(label, zone) {
+	auCheckButton(char* label, float* zone) :
+    auUIObject(label, zone) {
 	}
     
 	virtual ~auCheckButton() {
@@ -292,7 +296,8 @@ class auButton: public auUIObject {
     
 public:
     
-	auButton(char* label, float* zone) : auUIObject(label, zone) {
+	auButton(char* label, float* zone) :
+    auUIObject(label, zone) {
 	}
     
 	virtual ~auButton() {
@@ -323,18 +328,19 @@ public:
 public:
     
 	auSlider(char* label, float* zone, float init, float min, float max,
-             float step) : auUIObject(label, zone), fInit(init),
-                fMin(min), fMax(max), fStep(step) {
+             float step) :
+    auUIObject(label, zone), fInit(init), fMin(min), fMax(max), fStep(
+                                                                      step) {
 	}
     
-    virtual ~auSlider() {
+	virtual ~auSlider() {
 	}
     
-    virtual float GetValue() {
+	virtual float GetValue() {
 		return (*fZone - fMin) / (fMax - fMin);
 	}	// normalize
-	
-    virtual void SetValue(double f) {
+    
+	virtual void SetValue(double f) {
 		*fZone = range(fMin, fMax, (float) f);
 	} // expand
 };
@@ -350,7 +356,7 @@ public:
 	auUI() {
 	}
     
-    virtual ~auUI() {
+	virtual ~auUI() {
 		for (vector<auUIObject*>::iterator iter = fUITable.begin();
              iter != fUITable.end(); iter++)
 			delete *iter;
@@ -450,15 +456,6 @@ public:
 	}
 };
 
-///////////////////////////////////////////////////////////////////////////
-// name: "osci"
-// version: "1.0"
-// author: "Grame"
-// license: "BSD"
-// copyright: "(c)GRAME 2009"
-//
-// Code generated with Faust 0.9.58 (http://faust.grame.fr)
-//-----------------------------------------------------
 #ifndef FAUSTFLOAT
 #define FAUSTFLOAT float
 #endif
@@ -467,128 +464,109 @@ typedef long double quad;
 /* link with  */
 #include <math.h>
 
-
-
-//TODO
-static const UInt32 kNumNotes = 12;
-
 class FaustAUSynth;
 
-struct FaustAUSynthNote : public SynthNote
-{
-	virtual					~FaustAUSynthNote() {}
+struct FaustAUSynthNote: public SynthNote {
+	FaustAUSynthNote();
     
-	virtual bool			Attack(const MusicDeviceNoteParams &inParams)
-    {
-        double sampleRate = SampleRate();
-
-        //TODO
-        //maxamp = 0.4 * pow(inParams.mVelocity/127., 3.);
-        amp = 0.4 * pow(inParams.mVelocity/127., 3.);
+	virtual ~FaustAUSynthNote();
+    
+	virtual OSStatus Initialize();
+    
+	virtual bool Attack(const MusicDeviceNoteParams &inParams) {
+		double sampleRate = SampleRate();
         
-        //TODO
-        up_slope = maxamp / (0.01 * sampleRate);
-        dn_slope = -maxamp / (0.01 * sampleRate);
-        //fast_dn_slope = -maxamp / (0.005 * sampleRate);
-        ////
+		amp = inParams.mVelocity / 127.;
         
-        return true;
-    }
-	virtual void			Kill(UInt32 inFrame); // voice is being stolen.
-	virtual void			Release(UInt32 inFrame);
-	virtual void			FastRelease(UInt32 inFrame);
-	virtual Float32			Amplitude() { return amp; } // used for finding quietest note for voice stealing.
-	virtual OSStatus		Render(UInt64 inAbsoluteSampleFrame, UInt32 inNumFrames, AudioBufferList** inBufferList, UInt32 inOutBusCount);
+		return true;
+	}
+	virtual void Kill(UInt32 inFrame); // voice is being stolen.
+	virtual void Release(UInt32 inFrame);
+	virtual void FastRelease(UInt32 inFrame);
+	virtual Float32 Amplitude() {
+		return amp;
+	} // used for finding quietest note for voice stealing.
+	virtual OSStatus Render(UInt64 inAbsoluteSampleFrame, UInt32 inNumFrames,
+                            AudioBufferList** inBufferList, UInt32 inOutBusCount);
     
-    FaustAUSynth* synth;
+	FaustAUSynth* synth;
     
-    ////
-    double phase, amp, maxamp;
-	//double up_slope, dn_slope, fast_dn_slope;
-    double up_slope, dn_slope;
-    ////
+	double amp;
+    
+public:
+	auUI* dspUI = NULL;
+    
+	mydsp* dsp = NULL;
 };
 
-class FaustAUSynth : public AUMonotimbralInstrumentBase
-{
+class FaustAUSynth: public AUMonotimbralInstrumentBase {
 public:
-    FaustAUSynth(ComponentInstance inComponentInstance);
-	virtual						~FaustAUSynth();
+	FaustAUSynth(ComponentInstance inComponentInstance);
+	virtual ~FaustAUSynth();
     
-	virtual OSStatus			Initialize();
-	virtual void				Cleanup();
-	virtual OSStatus			Version() { return kFaustAUSynthVersion; }
+	virtual OSStatus Initialize();
+	virtual void Cleanup();
+	virtual OSStatus Version() {
+		return kFaustAUSynthVersion;
+	}
     
-	virtual AUElement*			CreateElement(			AudioUnitScope					scope,
-											  AudioUnitElement				element);
+	virtual AUElement* CreateElement(AudioUnitScope scope,
+                                     AudioUnitElement element);
     
-	virtual OSStatus			GetParameterInfo(		AudioUnitScope					inScope,
-                                                 AudioUnitParameterID			inParameterID,
-                                                 AudioUnitParameterInfo &		outParameterInfo);
+	virtual OSStatus GetParameterInfo(AudioUnitScope inScope,
+                                      AudioUnitParameterID inParameterID,
+                                      AudioUnitParameterInfo & outParameterInfo);
     
-    void SetParameter(AudioUnitParameterID paramID,
+	void SetParameter(AudioUnitParameterID paramID,
                       AudioUnitParameterValue value);
     
 	virtual OSStatus SetParameter(AudioUnitParameterID inID,
                                   AudioUnitScope inScope, AudioUnitElement inElement,
                                   AudioUnitParameterValue inValue, UInt32);
     
-	MidiControls*				GetControls( MusicDeviceGroupID inChannel)
-	{
+	MidiControls* GetControls(MusicDeviceGroupID inChannel) {
 		SynthGroupElement *group = GetElForGroupID(inChannel);
 		return (MidiControls *) group->GetMIDIControlHandler();
 	}
-	
+    
 private:
-	
+    
 	FaustAUSynthNote mNotes[kNumNotes];
     
 private:
-	auUI* dspUI;
+	auUI* dspUI = NULL;
     
 public:
-	mydsp* dsp;
+	mydsp* dsp = NULL;
     
-    auSlider* frequencySlider = NULL;
-    
+	int frequencyParameterID = -1;
     
 };
 
-
-///////////////////////////////////////
-
-
-//TODO
-static const UInt32 kMaxActiveNotes = 8;
-
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/**********************************************************************************/
 
 AUDIOCOMPONENT_ENTRY(AUMusicDeviceFactory, FaustAUSynth)
 
-//TODO set output channel
+//TODO set the output channels
 FaustAUSynth::FaustAUSynth(ComponentInstance inComponentInstance)
 : AUMonotimbralInstrumentBase(inComponentInstance, 0, 1)
 {
 	CreateElements();
-	
-    dspUI = new auUI();
+    
+	dspUI = new auUI();
     
 	dsp = new mydsp();
     
-	//TODO should be always 0?
-    int inChannels = dsp->getNumInputs();
-	int outChannels = dsp->getNumOutputs();
+	//int inChannels = dsp->getNumInputs();
+	//int outChannels = dsp->getNumOutputs();
     
 	//SetParamHasSampleRateDependency(true);
     
-	UInt32 frames = GetMaxFramesPerSlice();
-    
 	dsp->buildUserInterface(dspUI);
     
-    Globals()->UseIndexedParameters(dspUI->fUITable.size()); 
-
-    if (dspUI)
+	Globals()->UseIndexedParameters(dspUI->fUITable.size());
+    
+	if (dspUI)
         for (int i = 0; i < dspUI->fUITable.size(); i++)
             if (dspUI->fUITable[i] && dspUI->fUITable[i]->fZone)
             {
@@ -608,59 +586,54 @@ FaustAUSynth::FaustAUSynth(ComponentInstance inComponentInstance)
             }
 }
 
-
-FaustAUSynth::~FaustAUSynth()
-{
-
+FaustAUSynth::~FaustAUSynth() {
+	if (dsp)
+		delete dsp;
+    
+	if (dspUI)
+		delete dspUI;
 }
 
-
-void FaustAUSynth::Cleanup()
-{
+void FaustAUSynth::Cleanup() {
     
 }
 
-OSStatus FaustAUSynth::Initialize()
-{
+OSStatus FaustAUSynth::Initialize() {
 	OSStatus result = AUMonotimbralInstrumentBase::Initialize();
     
-    SetNotes(kNumNotes, kMaxActiveNotes, mNotes, sizeof(FaustAUSynthNote));
-
-    //TODO
-    dsp->init(44100);
+	for (int i = 0; i < kNumNotes; i++) {
+		mNotes[i].Initialize();
+		mNotes[i].synth = this;
+	}
     
-    //TODO kNumNotes
-    for (int i = 0; i < kNumNotes; i++)
-        mNotes[i].synth = this;
+	SetNotes(kNumNotes, kMaxActiveNotes, mNotes, sizeof(FaustAUSynthNote));
     
 	return result;
 }
 
-AUElement* FaustAUSynth::CreateElement(	AudioUnitScope					scope,
-                                       AudioUnitElement				element)
-{
-	switch (scope)
-	{
-		case kAudioUnitScope_Group :
-			return new SynthGroupElement(this, element, new MidiControls);
-		case kAudioUnitScope_Part :
-			return new SynthPartElement(this, element);
-		default :
-			return AUBase::CreateElement(scope, element);
+AUElement* FaustAUSynth::CreateElement(AudioUnitScope scope,
+                                       AudioUnitElement element) {
+	switch (scope) {
+        case kAudioUnitScope_Group:
+            return new SynthGroupElement(this, element, new MidiControls);
+        case kAudioUnitScope_Part:
+            return new SynthPartElement(this, element);
+        default:
+            return AUBase::CreateElement(scope, element);
 	}
 }
 
-OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
-                                                   AudioUnitParameterID			inParameterID,
-                                                   AudioUnitParameterInfo &		outParameterInfo)
-{
+OSStatus FaustAUSynth::GetParameterInfo(AudioUnitScope inScope,
+                                        AudioUnitParameterID inParameterID,
+                                        AudioUnitParameterInfo & outParameterInfo) {
     
-    OSStatus result = noErr;
+	OSStatus result = noErr;
     
 	char name[100];
 	CFStringRef str;
     
-	outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable + kAudioUnitParameterFlag_IsReadable;
+	outParameterInfo.flags = kAudioUnitParameterFlag_IsWritable
+    + kAudioUnitParameterFlag_IsReadable;
     
 	if (inScope == kAudioUnitScope_Global) {
         
@@ -668,7 +641,8 @@ OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
             && dspUI->fUITable[inParameterID]->fZone) {
             
 			if (dynamic_cast<auButton*>(dspUI->fUITable[inParameterID])) {
-				auToggleButton* toggle = (auToggleButton*) dspUI->fUITable[inParameterID];
+				auToggleButton* toggle =
+                (auToggleButton*) dspUI->fUITable[inParameterID];
 				toggle->GetName(name);
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
                 
@@ -678,7 +652,8 @@ OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
 				outParameterInfo.maxValue = 1;
 				outParameterInfo.defaultValue = 0;
 			} else if (dynamic_cast<auToggleButton*>(dspUI->fUITable[inParameterID])) {
-				auToggleButton* toggle = (auToggleButton*) dspUI->fUITable[inParameterID];
+				auToggleButton* toggle =
+                (auToggleButton*) dspUI->fUITable[inParameterID];
 				toggle->GetName(name);
                 
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
@@ -690,7 +665,8 @@ OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
 				outParameterInfo.defaultValue = 0;
                 
 			} else if (dynamic_cast<auCheckButton*>(dspUI->fUITable[inParameterID])) {
-				auCheckButton* check = (auCheckButton*) dspUI->fUITable[inParameterID];
+				auCheckButton* check =
+                (auCheckButton*) dspUI->fUITable[inParameterID];
 				check->GetName(name);
                 
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
@@ -706,11 +682,11 @@ OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
 				auSlider* slider = (auSlider*) dspUI->fUITable[inParameterID];
 				slider->GetName(name);
                 
-                //TODO
-                if (!strcmp(name, "freq")) {
-                    frequencySlider = slider;
-                }
-
+				//TODO the default parameter name which is set by MIDI note in 
+				if (!strcmp(name, "Frequency")) {
+					frequencyParameterID = inParameterID;
+				}
+                
 				str = CFStringCreateWithCString(kCFAllocatorDefault, name, 0);
                 
 				AUBase::FillInParameterName(outParameterInfo, str, false);
@@ -726,134 +702,131 @@ OSStatus			FaustAUSynth::GetParameterInfo(		AudioUnitScope					inScope,
 	}
     
 	return result;
-
+    
 }
 
-OSStatus FaustAUSynth::SetParameter(AudioUnitParameterID inID, AudioUnitScope inScope,
-                             AudioUnitElement inElement, AudioUnitParameterValue inValue,
-                             UInt32 inBufferOffsetInFrames) {
+OSStatus FaustAUSynth::SetParameter(AudioUnitParameterID inID,
+                                    AudioUnitScope inScope, AudioUnitElement inElement,
+                                    AudioUnitParameterValue inValue, UInt32 inBufferOffsetInFrames) {
 	if (inScope == kAudioUnitScope_Global) {
         
 		if (dspUI) {
 			if (dspUI->fUITable[inID] && dspUI->fUITable[inID]->fZone)
+                
 				*(dspUI->fUITable[inID]->fZone) = (FAUSTFLOAT) inValue;
             
-			if (dynamic_cast<auButton*>(dspUI->fUITable[inID]))
-				return AUMonotimbralInstrumentBase::SetParameter(inID, inScope, inElement, 0,
-                                                  inBufferOffsetInFrames);
-            
+			for (int i = 0; i < kNumNotes; i++) {
+				if (mNotes[i].dspUI)
+					*(mNotes[i].dspUI->fUITable[inID]->fZone) =
+                    (FAUSTFLOAT) inValue;
+			}
 		}
 	}
     
-	return AUMonotimbralInstrumentBase::SetParameter(inID, inScope, inElement, inValue,
-                                      inBufferOffsetInFrames);
+	return AUMonotimbralInstrumentBase::SetParameter(inID, inScope, inElement,
+                                                     inValue, inBufferOffsetInFrames);
 }
 
+/**********************************************************************************/
 
-void			FaustAUSynthNote::Release(UInt32 inFrame)
+FaustAUSynthNote::FaustAUSynthNote() {
+    
+}
+
+OSStatus FaustAUSynthNote::Initialize() {
+	dspUI = new auUI();
+	dsp = new mydsp();
+    
+	dsp->buildUserInterface(dspUI);
+    
+	//TODO find a way to call GetSampleRate(), there will be a NullPointerException if it is called
+	if (dsp)
+		dsp->init(44100);
+    
+	return noErr;
+}
+
+FaustAUSynthNote::~FaustAUSynthNote() {
+	if (dsp)
+		delete dsp;
+    
+	if (dspUI)
+		delete dspUI;
+}
+
+void FaustAUSynthNote::Release(UInt32 inFrame) {
+	SynthNote::Release(inFrame);
+}
+
+void FaustAUSynthNote::FastRelease(UInt32 inFrame) // voice is being stolen.
 {
 	SynthNote::Release(inFrame);
 }
 
-void			FaustAUSynthNote::FastRelease(UInt32 inFrame) // voice is being stolen.
-{
-	SynthNote::Release(inFrame);
-}
-
-void			FaustAUSynthNote::Kill(UInt32 inFrame) // voice is being stolen.
+void FaustAUSynthNote::Kill(UInt32 inFrame) // voice is being stolen.
 {
 	SynthNote::Kill(inFrame);
 }
 
-OSStatus		FaustAUSynthNote::Render(UInt64 inAbsoluteSampleFrame, UInt32 inNumFrames, AudioBufferList** inBufferList, UInt32 inOutBusCount)
-{
-
+OSStatus FaustAUSynthNote::Render(UInt64 inAbsoluteSampleFrame,
+                                  UInt32 inNumFrames, AudioBufferList** inBufferList,
+                                  UInt32 inOutBusCount) {
 	int MAX_OUT_CHANNELS = 1000;
     
-    int inChannels = synth->dsp->getNumInputs();
-	int outChannels = synth->dsp->getNumOutputs();
+	float* outBuffer[MAX_OUT_CHANNELS];
+	float* audioData[MAX_OUT_CHANNELS];
     
-	//TODO
-    float* audioData[MAX_OUT_CHANNELS];
+	int inChannels = dsp->getNumInputs();
+	int outChannels = dsp->getNumOutputs();
     
-	for (int i = 0; i < outChannels; i++) {
-        //TODO bus=0
-        audioData[i] = (float*) inBufferList[0]->mBuffers[i].mData;
+    // bus number is assumed to be zero
+    for (int i = 0; i < outChannels; i++) {
+		outBuffer[i] = new float[inNumFrames];
+        
+		audioData[i] = (float*) inBufferList[0]->mBuffers[i].mData;
 	}
     
-    double sampleRate = SampleRate();
-    
-    if (synth) {
-        if (synth->frequencySlider)
-            //synth->frequencySlider->SetValue(((float)GetMidiKey())/ 88.0);
-            synth->frequencySlider->SetValue(Frequency() / 24000.0);
-
-        if (synth->dsp) //TODO input=null?
-            synth->dsp->compute(inNumFrames, audioData, audioData);
-    }
-	switch (GetState())
-	{
-		case kNoteState_Attacked :
-		case kNoteState_Sostenutoed :
-		case kNoteState_ReleasedButSostenutoed :
-		case kNoteState_ReleasedButSustained :
-        {
-            for (UInt32 frame=0; frame<inNumFrames; ++frame)
-            {
-                
-                ////
-               // if (amp < maxamp) amp += up_slope;
-                
-                //float out = pow5(sin(phase)) * amp * globalVol;
-               // float out = pow5(sin(phase)) * amp;
-               // phase += freq;
-               // if (phase > twopi) phase -= twopi;
-                ////
-                
-                
-                //left[frame] += out;
-                //if (right) right[frame] += out;
-            }
-			break;
-        }
-			
-		case kNoteState_Released :
-        case kNoteState_FastReleased :
-        {
-  /*         UInt32 endFrame = 0xFFFFFFFF;
-            for (UInt32 frame=0; frame<inNumFrames; ++frame)
-            {
-                if (amp > 0.0) amp += dn_slope;
-                else if (endFrame == 0xFFFFFFFF) endFrame = frame;
-                
-                
-                ////
-                //float out = pow5(sin(phase)) * amp * globalVol;
-                
-                //float out = pow5(sin(phase)) * amp;
-                //phase += freq;
-                
-
-                //left[frame] += out;
-                //if (right) right[frame] += out;
-                
-            }
-            if (endFrame != 0xFFFFFFFF) {*/
-                NoteEnded(0xFFFFFFFF);
-          //  }
-        
-			break;
+	if (synth) {
+		auSlider* frequencySlider = NULL;
+		if (synth->frequencyParameterID != -1) {
+			if (dspUI)
+				frequencySlider =
+                (auSlider*) dspUI->fUITable[synth->frequencyParameterID];
+			if (frequencySlider)
+				//TODO change the SetValue function call accordingly
+                //frequencySlider->SetValue(Frequency() / 24000.0);
+				frequencySlider->SetValue((float) GetMidiKey() / 88.0);
 		}
-		default :
-			break;
+        
+		dsp->compute(inNumFrames, audioData, outBuffer);
+	}
+	switch (GetState()) {
+        case kNoteState_Attacked:
+        case kNoteState_Sostenutoed:
+        case kNoteState_ReleasedButSostenutoed:
+        case kNoteState_ReleasedButSustained: {
+            for (int i = 0; i < outChannels; i++) {
+                for (UInt32 frame = 0; frame < inNumFrames; ++frame) {
+                    audioData[i][frame] += outBuffer[i][frame] * amp;
+                }
+            }
+            break;
+            
+        }
+            
+        case kNoteState_Released:
+        case kNoteState_FastReleased: {
+            
+            NoteEnded(0xFFFFFFFF);
+            
+            break;
+        }
+        default:
+            break;
 	}
 	return noErr;
- 
- 
     
 }
-
-
 
 /********************END ARCHITECTURE SECTION (part 2/2)****************/
 
