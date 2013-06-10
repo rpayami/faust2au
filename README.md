@@ -22,9 +22,9 @@ faust2au filename manufacturer STYP MANF
 
   'manufacturer' is the manufacturer of the AU (The default value is 'Grame')
 
-  'STYP' is a four-charachter subtype (The default is the first four characters of the 'filename')
+  'STYP' is a four-character subtype (The default is the first four characters of the 'filename')
 
-  'MANF' is a four-charachter manufacturer (The default is the first four characters of the 'manufacturer')
+  'MANF' is a four-character manufacturer (The default is the first four characters of the 'manufacturer')
 
 
 ========
