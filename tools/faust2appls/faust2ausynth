@@ -7,15 +7,32 @@
 #                                                                   
 #####################################################################
 
-######################################################
 
-FAUST_DIR=/Applications/faust-0.9.58
+ARCHFILE="au.cpp"
+PATH=$PATH:/usr/local/bin
+
+#-------------------------------------------------------------------------------
+# Search where Faust is installed. Store '.../lib/faust/' in $FLIB
+# and '.../include/(faust)' in $FINC 
+
+FLIB=""; FINC=""; 
+FPATH="$FAUST_INSTALL /usr/local /usr /opt /opt/local"; # <- where to search
+for f in $FPATH; do
+	if [ -e $f/lib/faust ]; 	then FLIB=$f/lib/faust;	fi
+	if [ -e $f/include/faust ];	then FINC=$f/include/; fi
+done
+if [ -z "$FLIB" -o -z "$FINC" ]; then 
+	echo "ERROR : $0 cannot find Faust directories (normally /usr/local/include/faust and /usr/local/lib/faust)"; 
+	exit 1;
+fi
+
+FAUST_DIR=$FLIB
 
 ######################################################
 
 AU_DIR=$HOME/Library/Audio/Plug-Ins/Components
 
-FAUST_AUSYNTH_DIR=$FAUST_DIR/architecture/AUSynth/
+FAUST_AUSYNTH_DIR=$FAUST_DIR/AUSynth/
 cd $FAUST_AUSYNTH_DIR
 
 if [ $# -lt 1 ]
@@ -30,7 +47,7 @@ then
     exit
 fi
 
-faust -a $FAUST_DIR/architecture/ausynth.cpp $1 -o Source/ausynth-output.cpp
+faust -a $FAUST_DIR/ausynth.cpp $1 -o Source/ausynth-output.cpp
 
 FULL_FILE_NAME=$1
 
@@ -79,6 +96,8 @@ perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUSynthVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynthVersion.h 
 
 xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null 2> ./build_errors.log
+
+rm Source/ausynth-output.cpp
 
 rm Info.plist
 cp Info-template.plist Info.plist
