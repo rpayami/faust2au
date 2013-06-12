@@ -8,6 +8,7 @@
 #####################################################################
 
 ARCHFILE="au.cpp"
+ARCHLIB="-framework CoreAudio -framework AudioUnit -framework CoreServices"
 PATH=$PATH:/usr/local/bin
 
 #-------------------------------------------------------------------------------
@@ -25,11 +26,46 @@ if [ -z "$FLIB" -o -z "$FINC" ]; then
 	exit 1;
 fi
 
-######################################################
+#-------------------------------------------------------------------------------
+
+#PHASE 1 : collects files and options from the command line
+
+for p in $@; do
+    if [ "$p" = -omp ]; then
+        if [[ $CXX == "icpc" ]]; then
+            OMP="-openmp"
+        else
+            OMP="-fopenmp"
+        fi
+    fi
+
+    if [ "$p" = -icc ]; then
+		ignore=" "
+    elif [ $p = "-osc" ]; then
+		 OSCDEFS="DEFINES += OSCCTRL"
+		 OSCLIBS="-L$FLIB -lOSCFaust -loscpack"
+	elif [ "$p" = "-httpd" ]; then
+		HTTPDEFS="DEFINES += HTTPCTRL"
+		HTTPLIBS="-L$FLIB -lHTTPDFaust -lmicrohttpd"
+    elif [ ${p:0:1} = "-" ]; then
+	    OPTIONS="$OPTIONS $p"
+	elif [[ -e "$p" ]]; then
+	    FILES="$FILES $p"
+	else
+	    OPTIONS="$OPTIONS $p"
+	fi
+done
+
+
+#-------------------------------------------------------------------------------
+
+#PHASE 2 : compile the *.dsp file
+
+# could use FILES for handling multiple dap files, while other AU args like manufacturer and subtype should be handled in a way
 
 FAUST_DIR=$FLIB
 AU_DIR=$HOME/Library/Audio/Plug-Ins/Components
-TEMP_DIR=FAUST_AU_XXX
+TEMP_DIR=faust.XXX
 
 if [ $# -lt 1 ]
 then
@@ -47,11 +83,13 @@ if [ -d $TEMP_DIR ]
 then
 	rm -r $TEMP_DIR
 fi
+
+
 mkdir $TEMP_DIR
 cp -r /usr/local/lib/faust/AU/* $TEMP_DIR
 cd $TEMP_DIR
 
-faust -a $FAUST_DIR/au.cpp $1 -o Source/au-output.cpp
+faust $OPTIONS -a $FAUST_DIR/$ARCHFILE $1 -o Source/au-output.cpp
 if [ ! -f Source/au-output.cpp ]
 then
 	echo faust could not generate cpp file

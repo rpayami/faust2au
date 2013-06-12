@@ -9,6 +9,7 @@
 
 
 ARCHFILE="ausynth.cpp"
+ARCHLIB="-framework CoreAudio -framework AudioUnit -framework CoreServices"
 PATH=$PATH:/usr/local/bin
 
 #-------------------------------------------------------------------------------
@@ -26,11 +27,44 @@ if [ -z "$FLIB" -o -z "$FINC" ]; then
 	exit 1;
 fi
 
-######################################################
+#-------------------------------------------------------------------------------
+#PHASE 1 : collects files and options from the command line
+
+for p in $@; do
+    if [ "$p" = -omp ]; then
+        if [[ $CXX == "icpc" ]]; then
+            OMP="-openmp"
+        else
+            OMP="-fopenmp"
+        fi
+    fi
+
+    if [ "$p" = -icc ]; then
+		ignore=" "
+    elif [ $p = "-osc" ]; then
+		 OSCDEFS="DEFINES += OSCCTRL"
+		 OSCLIBS="-L$FLIB -lOSCFaust -loscpack"
+	elif [ "$p" = "-httpd" ]; then
+		HTTPDEFS="DEFINES += HTTPCTRL"
+		HTTPLIBS="-L$FLIB -lHTTPDFaust -lmicrohttpd"
+    elif [ ${p:0:1} = "-" ]; then
+	    OPTIONS="$OPTIONS $p"
+	elif [[ -e "$p" ]]; then
+	    FILES="$FILES $p"
+	else
+	    OPTIONS="$OPTIONS $p"
+	fi
+done
+
+#-------------------------------------------------------------------------------
+
+#PHASE 2 : compile the *.dsp file
+
+# could use FILES for handling multiple dap files, while other AU args like manufacturer and subtype should be handled in a way
 
 FAUST_DIR=$FLIB
 AU_DIR=$HOME/Library/Audio/Plug-Ins/Components
-TEMP_DIR=FAUST_AU_XXX
+TEMP_DIR=faust.XXX
 
 if [ $# -lt 1 ]
 then
@@ -52,7 +86,7 @@ mkdir $TEMP_DIR
 cp -r /usr/local/lib/faust/AUSynth/* $TEMP_DIR
 cd $TEMP_DIR
 
-faust -a $FAUST_DIR/ausynth.cpp $1 -o Source/ausynth-output.cpp
+faust -a $FAUST_DIR/$ARCHFILE $1 -o Source/ausynth-output.cpp
 if [ ! -f Source/ausynth-output.cpp ]
 then
 	echo faust could not generate cpp file
@@ -110,25 +144,25 @@ perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynthVersion.h
 
 xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null > ./build_errors.log
 
-#rm Source/ausynth-output.cpp
+rm Source/ausynth-output.cpp
 
-#rm Info.plist
-#cp Info-template.plist Info.plist
+rm Info.plist
+cp Info-template.plist Info.plist
 
-#rm English.lproj/InfoPlist.strings
-#cp English.lproj/InfoPlist-template.strings English.lproj/InfoPlist.strings
+rm English.lproj/InfoPlist.strings
+cp English.lproj/InfoPlist-template.strings English.lproj/InfoPlist.strings
 
-#rm Source/AUSource/FaustAUSynth.r
-#cp Source/AUSource/FaustAUSynth-template.r Source/AUSource/FaustAUSynth.r
+rm Source/AUSource/FaustAUSynth.r
+cp Source/AUSource/FaustAUSynth-template.r Source/AUSource/FaustAUSynth.r
 
-#rm Source/AUSource/FaustAUSynthVersion.h
-#cp Source/AUSource/FaustAUSynthVersion-template.h Source/AUSource/FaustAUSynthVersion.h
+rm Source/AUSource/FaustAUSynthVersion.h
+cp Source/AUSource/FaustAUSynthVersion-template.h Source/AUSource/FaustAUSynthVersion.h
 
 if [ ! -d $AU_DIR/FaustAUSynth.component/ ]
 then
 	echo unable to generate AU
 	cd ..
-	#rm -r $TEMP_DIR
+	rm -r $TEMP_DIR
 	exit	
 fi
 
