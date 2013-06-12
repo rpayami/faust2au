@@ -3,9 +3,7 @@ faust2au
 
 INSTALLATION:
 
-- copy the contents of the 'architecture' and 'tools' folders into the similar faust folders
-- if needed, change FAUST_DIR variable in 'faust2au' (means faust2aueffect) and 'faust2ausynth' files in the 'tools/faust2appls/' folder
-- in the terminal window, run  'install faust2au /usr/local/bin' and 'install faust2ausynth /usr/local/bin' (the files you just copied to 'faust2appls' in the previous step)
+- replace faust installation Makefiles in the root and tools/faust2appls/ folders and run 'sudo make install' in the root installation folder
 - Xcode should also be installed on your system (https://developer.apple.com/xcode/)
 
 
