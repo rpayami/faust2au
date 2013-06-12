@@ -8,7 +8,7 @@
 #####################################################################
 
 
-ARCHFILE="au.cpp"
+ARCHFILE="ausynth.cpp"
 PATH=$PATH:/usr/local/bin
 
 #-------------------------------------------------------------------------------
@@ -26,14 +26,11 @@ if [ -z "$FLIB" -o -z "$FINC" ]; then
 	exit 1;
 fi
 
-FAUST_DIR=$FLIB
-
 ######################################################
 
+FAUST_DIR=$FLIB
 AU_DIR=$HOME/Library/Audio/Plug-Ins/Components
-
-FAUST_AUSYNTH_DIR=$FAUST_DIR/AUSynth/
-cd $FAUST_AUSYNTH_DIR
+TEMP_DIR=FAUST_AU_XXX
 
 if [ $# -lt 1 ]
 then
@@ -47,7 +44,23 @@ then
     exit
 fi
 
+if [ -d $TEMP_DIR ]
+then
+	rm -r $TEMP_DIR
+fi
+mkdir $TEMP_DIR
+cp -r /usr/local/lib/faust/AUSynth/* $TEMP_DIR
+cd $TEMP_DIR
+
 faust -a $FAUST_DIR/ausynth.cpp $1 -o Source/ausynth-output.cpp
+if [ ! -f Source/ausynth-output.cpp ]
+then
+	echo faust could not generate cpp file
+	cd ..
+	#rm -r $TEMP_DIR
+	exit	
+fi
+
 
 FULL_FILE_NAME=$1
 
@@ -95,28 +108,39 @@ perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynth.r
 perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUSynthVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUSynthVersion.h 
 
-xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null 2> ./build_errors.log
+xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null > ./build_errors.log
 
-rm Source/ausynth-output.cpp
+#rm Source/ausynth-output.cpp
 
-rm Info.plist
-cp Info-template.plist Info.plist
+#rm Info.plist
+#cp Info-template.plist Info.plist
 
-rm English.lproj/InfoPlist.strings
-cp English.lproj/InfoPlist-template.strings English.lproj/InfoPlist.strings
+#rm English.lproj/InfoPlist.strings
+#cp English.lproj/InfoPlist-template.strings English.lproj/InfoPlist.strings
 
-rm Source/AUSource/FaustAUSynth.r
-cp Source/AUSource/FaustAUSynth-template.r Source/AUSource/FaustAUSynth.r
+#rm Source/AUSource/FaustAUSynth.r
+#cp Source/AUSource/FaustAUSynth-template.r Source/AUSource/FaustAUSynth.r
 
-rm Source/AUSource/FaustAUSynthVersion.h
-cp Source/AUSource/FaustAUSynthVersion-template.h Source/AUSource/FaustAUSynthVersion.h
+#rm Source/AUSource/FaustAUSynthVersion.h
+#cp Source/AUSource/FaustAUSynthVersion-template.h Source/AUSource/FaustAUSynthVersion.h
+
+if [ ! -d $AU_DIR/FaustAUSynth.component/ ]
+then
+	echo unable to generate AU
+	cd ..
+	#rm -r $TEMP_DIR
+	exit	
+fi
 
 if [ -d $AU_DIR/"$FILE_NAME".component/ ]
 then
 	rm -r  $AU_DIR/"$FILE_NAME".component/
 fi
-cp -r $AU_DIR/FaustAUSynth.component $AU_DIR/"$FILE_NAME".component/
-rm -r $AU_DIR/FaustAUSynth.component/
+
+mv $AU_DIR/FaustAUSynth.component $AU_DIR/"$FILE_NAME".component
+
+cd ..
+rm -r $TEMP_DIR
 
 echo "'$NAME'" AU generated and installed successfully 
 

@@ -52,6 +52,13 @@ cp -r /usr/local/lib/faust/AU/* $TEMP_DIR
 cd $TEMP_DIR
 
 faust -a $FAUST_DIR/au.cpp $1 -o Source/au-output.cpp
+if [ ! -f Source/au-output.cpp ]
+then
+	echo faust could not generate cpp file
+	cd ..
+	rm -r $TEMP_DIR
+	exit	
+fi
 
 FULL_FILE_NAME=$1
 
@@ -113,6 +120,14 @@ cp Source/AUSource/FaustAU-template.r Source/AUSource/FaustAU.r
 
 rm Source/AUSource/FaustAUVersion.h
 cp Source/AUSource/FaustAUVersion-template.h Source/AUSource/FaustAUVersion.h
+
+if [ ! -d $AU_DIR/FaustAU.component/ ]
+then
+	echo unable to generate AU
+	cd ..
+	rm -r $TEMP_DIR
+	exit	
+fi
 
 if [ -d $AU_DIR/"$FILE_NAME".component/ ]
 then
