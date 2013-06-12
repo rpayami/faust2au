@@ -7,7 +7,6 @@
 #                                                                   
 #####################################################################
 
-
 ARCHFILE="au.cpp"
 PATH=$PATH:/usr/local/bin
 
@@ -26,14 +25,11 @@ if [ -z "$FLIB" -o -z "$FINC" ]; then
 	exit 1;
 fi
 
-FAUST_DIR=$FLIB
-
 ######################################################
 
+FAUST_DIR=$FLIB
 AU_DIR=$HOME/Library/Audio/Plug-Ins/Components
-
-FAUST_AU_DIR=$FAUST_DIR/AU/
-cd $FAUST_AU_DIR
+TEMP_DIR=FAUST_AU_XXX
 
 if [ $# -lt 1 ]
 then
@@ -46,6 +42,14 @@ then
     echo input file does not exist
     exit
 fi
+
+if [ -d $TEMP_DIR ]
+then
+	rm -r $TEMP_DIR
+fi
+mkdir $TEMP_DIR
+cp -r /usr/local/lib/faust/AU/* $TEMP_DIR
+cd $TEMP_DIR
 
 faust -a $FAUST_DIR/au.cpp $1 -o Source/au-output.cpp
 
@@ -93,11 +97,12 @@ perl -pi -e 's/_DESC_/'"$NAME"'/g' Source/AUSource/FaustAU.r
 perl -pi -e 's/_STYP_/'"$SUB_TYPE"'/g' Source/AUSource/FaustAUVersion.h
 perl -pi -e 's/_MANF_/'"$MANF"'/g' Source/AUSource/FaustAUVersion.h 
 
-xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null 2> ./build_errors.log
+xcodebuild ARCHS="i386 x86_64" CONFIGURATION_BUILD_DIR=$HOME/Library/Audio/Plug-Ins/Components > /dev/null > ./build_errors.log
 
 rm Source/au-output.cpp
 
 rm Info.plist
+
 cp Info-template.plist Info.plist
 
 rm English.lproj/InfoPlist.strings
@@ -113,8 +118,11 @@ if [ -d $AU_DIR/"$FILE_NAME".component/ ]
 then
 	rm -r  $AU_DIR/"$FILE_NAME".component/
 fi
-cp -r $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component/
-rm -r $AU_DIR/FaustAU.component/
+
+mv $AU_DIR/FaustAU.component $AU_DIR/"$FILE_NAME".component
+
+cd ..
+rm -r $TEMP_DIR
 
 echo "'$NAME'" AU generated and installed successfully 
 
