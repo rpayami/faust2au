@@ -3,7 +3,9 @@ faust2au
 
 INSTALLATION:
 
-- replace faust installation Makefiles in the root and tools/faust2appls/ folders and run 'sudo make install' in the root installation folder
+- download and extract faust installation archive (http://sourceforge.net/projects/faudiostream/files/faust-0.9.58.zip/download)
+- merge the files in this repository with the extracted files (replace Makefiles) 
+- install faust
 - Xcode should also be installed on your system (https://developer.apple.com/xcode/)
 
 
